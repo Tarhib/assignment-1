@@ -3,7 +3,7 @@
 import fibonacci from "./fib";
 
 export default (req, res) => {
-  const num :string  = req.params.num;
+  const num :string  = req.params.num as string;
 
   const fibN = fibonacci(parseInt(num));
   let result = `fibonacci(${num}) is ${fibN}`;
